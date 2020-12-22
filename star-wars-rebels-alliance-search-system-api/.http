@@ -1,0 +1,19 @@
+### LOGIN  ###
+
+POST http://localhost:80/api/users/login
+Content-Type: application/json
+
+{
+  "username": "Luqsdke",
+  "password": "Skywalker"
+}
+
+
+### SEARCH ###
+GET http://localhost:80/api/contents?type=qsd&search=a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1a2UiLCJpYXQiOjE2MDg0NjU0MjN9.3X4UBXgDiVJoMgh-2ywpQnSEseZ_juFLpPESiTcJQfA
+
+
+### Get content
+GET http://localhost:80/api/contents/species/0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1a2UiLCJpYXQiOjE2MDg0NjU0MjN9.3X4UBXgDiVJoMgh-2ywpQnSEseZ_juFLpPESiTcJQfA

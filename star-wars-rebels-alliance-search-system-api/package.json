@@ -1,0 +1,26 @@
+{
+  "name": "star-wars-rebels-alliance-search-system-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.1",
+    "@hapi/glue": "^8.0.0",
+    "@hapi/hapi": "^20.0.3",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/jwt": "^2.0.1",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
