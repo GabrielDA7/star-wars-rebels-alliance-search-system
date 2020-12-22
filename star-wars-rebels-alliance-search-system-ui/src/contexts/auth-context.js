@@ -2,6 +2,7 @@ import React, { useMemo, useCallback, useState } from 'react';
 import jwt_decode from 'jwt-decode';
 import * as AuthApi from '../api/auth-api';
 import { getToken, setToken } from '../utils/auth';
+import {useHistory} from 'react-router-dom';
 
 const AuthContext = React.createContext(null);
 AuthContext.displayName = 'AuthContext';
@@ -9,6 +10,7 @@ AuthContext.displayName = 'AuthContext';
 function AuthProvider(props) {
   const token = getToken();
   const [user, setUser] = useState(token ? jwt_decode(token) : null);
+  const history = useHistory();
 
   const login = useCallback(
     (loginForm) => AuthApi.login(loginForm)
@@ -21,7 +23,8 @@ function AuthProvider(props) {
   const logout = useCallback(() => {
     setToken(null);
     setUser(null);
-  }, [setUser]);
+    history.push('/');
+  }, [setUser, history]);
 
   const providerValue = useMemo(
     () => ({ user, login, logout }),
